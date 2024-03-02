@@ -39,7 +39,6 @@ function App() {
     e.preventDefault();
     addDoc(collection(db, "tasks"), {
       task: taskinput,
-      desc: descinput,
       timestamp: serverTimestamp(),
     });
 
@@ -63,18 +62,7 @@ function App() {
             border: "1px solid #ccc",
           }}
         />
-        <input
-          type="text"
-          placeholder="Write description"
-          value={descinput}
-          onChange={(e) => setDescInput(e.target.value)}
-          style={{
-            padding: "10px",
-            marginRight: "10px",
-            borderRadius: "5px",
-            border: "1px solid #ccc",
-          }}
-        />
+       
         <button
           type="submit"
           style={{
