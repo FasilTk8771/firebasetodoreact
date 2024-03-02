@@ -18,14 +18,6 @@ const Todo = ({ arr }) => {
           <p>{arr.item.desc}</p>
           <button
             onClick={() => {
-              setUpdatedata(arr);
-              handleModal();
-            }}
-          >
-            Edit
-          </button>
-          <button
-            onClick={() => {
               deleteDoc(doc(db, "tasks", arr.id));
             }}
           >
