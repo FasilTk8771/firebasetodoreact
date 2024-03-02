@@ -56,14 +56,38 @@ function App() {
           placeholder="Add task"
           value={taskinput}
           onChange={(e) => setTaskInput(e.target.value)}
+          style={{
+            padding: "10px",
+            marginRight: "10px",
+            borderRadius: "5px",
+            border: "1px solid #ccc",
+          }}
         />
         <input
           type="text"
           placeholder="Write description"
           value={descinput}
           onChange={(e) => setDescInput(e.target.value)}
+          style={{
+            padding: "10px",
+            marginRight: "10px",
+            borderRadius: "5px",
+            border: "1px solid #ccc",
+          }}
         />
-        <button type="submit">Add task</button>
+        <button
+          type="submit"
+          style={{
+            padding: "10px",
+            borderRadius: "5px",
+            backgroundColor: "#4CAF50",
+            color: "white",
+            border: "none",
+            cursor: "pointer",
+          }}
+        >
+          Add task
+        </button>
       </form>
       <ul>
         {todos.map((item) => (
