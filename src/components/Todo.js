@@ -16,6 +16,7 @@ const Todo = ({ arr }) => {
         <div>
           <p>{arr.item.task}</p>
           <p>{arr.item.desc}</p>
+          <p>{arr.item.timestamp}</p>
           <button
             onClick={() => {
               deleteDoc(doc(db, "tasks", arr.id));
